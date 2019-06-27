@@ -3,10 +3,9 @@
   <h1><%=t".home"%></h1>
   <h2>
     This is the home page for the
-    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+    <%= link_to "Ruby on Rails Tutorial","https://www.railstutorial.org/"%>
     sample application.
   </h2>
-
   <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 

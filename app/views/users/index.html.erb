@@ -1,0 +1,12 @@
+<% provide :title, t(".all_users") %>
+<h1><%= t(".all_users") %></h1>
+
+<%= paginate @users, theme: "twitter-bootstrap-3" %>
+
+<ul class="users">
+  <% @users.each do |user| %>
+   <%= render user %>
+  <% end %>
+</ul>
+
+<%= paginate @users, theme: "twitter-bootstrap-3" %>

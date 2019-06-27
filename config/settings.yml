@@ -4,5 +4,8 @@ user:
     max_email_length: 255
     min_pass_length: 6
   gravatar_size: 80
+  gravatar_size_small: 50
 remember_box:
-  is_checked: '1'
+  is_checked: "1"
+list_user:
+  num_user_per_page: "6"

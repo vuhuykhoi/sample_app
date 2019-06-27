@@ -9,11 +9,13 @@ end
 gem "bootstrap-sass", "3.3.7"
 
 group :development, :test do
-  gem "byebug",  "9.0.6", platform: :mri
+  gem "byebug", "9.0.6", platform: :mri
   gem "rubocop", "~> 0.54.0", require: false
   gem "sqlite3", "1.3.13"
 end
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
+gem "bcrypt", "3.1.12"
+gem "config"
 gem "rails", "~> 5.2.3"
 
 # Use sqlite3 as the database for Active Record
@@ -46,6 +48,7 @@ gem "jbuilder", "~> 2.5"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
+
 group :development do
   # Access an interactive console on exception pages or
   # by calling "console" anywhere in the code.

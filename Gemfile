@@ -13,11 +13,11 @@ group :development, :test do
   gem "rubocop", "~> 0.54.0", require: false
   gem "sqlite3", "1.3.13"
 end
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "bcrypt", "3.1.12"
 gem "config"
 gem "rails", "~> 5.2.3"
-
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3"
 # Use Puma as the app server

@@ -21,6 +21,37 @@ vi:
       about: "Về chúng tôi"
       contact: "Liên hệ"
       news: "tin tức"
+      english: "Tiếng anh"
+      vietnamese: "Tiếng việt"
   users:
     new:
       signup: "Đăng ký tài khoản"
+      name: "tên đăng nhập"
+      password: "mật khẩu"
+      confirm_pass: "Xác nhận mật khẩu"
+      email: "Email"
+      create_account: "Tạo tài khoản"
+  activerecord:
+    attributes:
+      user:
+        name: "Tên người dùng"
+        email: "Email"
+        password: "Mật khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+            email:
+              blank: "không được để trống"
+              invalid: "không hợp lệ"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn"
+            password_confirmation:
+              confirmation: "xác nhận không đúng (tối thiểu 6 kí tự)"
+  shared:
+    error_messages:
+      error: "lỗi"
+  the_form_contain: "Biểu mẫu này chứa"

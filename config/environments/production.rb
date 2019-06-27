@@ -62,8 +62,30 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "sample_app_#{Rails.env}"
+  # Store uploaded files on the local file system (see config/storage.yml for options)
+  #config.active_storage.service = :local
 
-  config.action_mailer.perform_caching = false
+  # ActionMailer Config
+  host = "vhk-rails-tuto.herokuapp.com"
+  config.action_mailer.default_url_options = { host:host }
+  config.action_mailer.delivery_method = :smtp
+  # change to true to allow email to be sent during development
+  config.action_mailer.perform_deliveries = #false
+                                            true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain:"heroku.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    :openssl_verify_mode  => "none",
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
+
+  #config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

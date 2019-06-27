@@ -5,16 +5,9 @@ class SessionsController < ApplicationController
     user = User.find_by email: params[:session][:email].downcase
 
     if user&.authenticate(params[:session][:password])
-      if user.activated?
-        log_in user
-        check_remember_box user
-        redirect_back_or user
-      else
-        flash[:warning] = t "not_activated_message"
-        redirect_to root_url
-      end
+      check_user_active user
     else
-      flash.now[:danger] = t ".invalid_user_infor"
+      flash.now[:danger] = t ".invalid_user_infor_message"
       render :new
     end
   end
@@ -34,6 +27,17 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def check_user_active user
+    if user.activated?
+      log_in user
+      check_remember_box user
+      redirect_back_or user
+    else
+      flash[:warning] = t "not_activated_message"
+      redirect_to root_url
+    end
+  end
 
   def check_remember_box user
     if params[:session][:remember_me] == Settings.remember_box.is_checked

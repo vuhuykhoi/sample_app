@@ -71,6 +71,8 @@ en:
       all_users: "All users"
     delete:
       user_deleted_message: "User deleted"
+    show:
+      microposts: "microposts"
   sessions:
     new:
       email: "Email"
@@ -79,3 +81,27 @@ en:
   shared:
     error_messages:
       error: "error"
+  post: "Post"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+  microposts:
+    micropost:
+      delete : "delete"
+    alert_js:
+      max_size: "Maximum file size is 5MB. Please choose a smaller file."
+  confirm: "confirm"
+

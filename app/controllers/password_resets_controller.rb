@@ -31,7 +31,7 @@ class PasswordResetsController < ApplicationController
       flash[:success] = t ".password_has_been_reset"
       redirect_to @user
     else
-      render :edit # Case (2)
+      render :edit
     end
   end
 

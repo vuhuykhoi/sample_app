@@ -34,7 +34,6 @@ en:
   profile_updated_message: "Profile updated"
   require_login_message: "Please log in."
   invalid_user_infor_message: "Invalid email/password combination"
-  hello: "Hello world"
   static_pages:
     home:
       home: "Home"

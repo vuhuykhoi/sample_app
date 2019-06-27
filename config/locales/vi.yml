@@ -1,49 +1,123 @@
 vi:
-  static_pages:
-    home:
-      home: "Trang chủ"
-      signup: "Đăng ký tài khoản"
-    help:
-      help: "Trợ giúp"
-    about:
-      about: "Về chúng tôi"
-    contact:
-      contact: "Liên hệ"
+  web_title: "Hướng dẫn Rails qua các ví dụ"
+  welcome_message: "Chào mừng bạn đến với trang web của chúng tôi"
 
-  layouts:
-    application:
-      web_title: "Hướng dẫn Rails qua các ví dụ"
-    header:
-      home: "Trang chủ"
-      help: "Trợ giúp"
-      login: "Đăng nhập"
-    footer:
-      about: "Về chúng tôi"
-      contact: "Liên hệ"
-      news: "tin tức"
-      english: "Tiếng anh"
-      vietnamese: "Tiếng việt"
+  label:
+    feeds: "Bảng tin"
+    microposts: "Danh sách bài đăng"
+    micropost: "Bài đăng"
+    micropost_content: "Bạn đang nghĩ gì?"
+    following: "Đang theo dõi"
+    followers: "Người theo dõi"
+    posted: "Đã đăng"
+    ago: "trước"
+    email: "Địa chỉ email"
+    password: "Mật khẩu"
+    password_confirmation: "Xác nhận mật khẩu"
+
+  dialog:
+    delete_micropost_confirm: "Bạn có chắc chắn muốn xóa bài đăng này?"
+    delete_account_confirm: "Bạn có chắc chắn muốn xóa người dùng này?"
+
+  page:
+    home: "Trang chủ"
+    signup: "Đăng ký tài khoản"
+    help: "Trợ giúp"
+    about: "Về chúng tôi"
+    contact: "Liên hệ"
+    about: "Về chúng tôi"
+    news: "Tin tức"
+    english: "Tiếng anh"
+    vietnamese: "Tiếng việt"
+    users: "Người dùng khác"
+    account: "Tài khoản của tôi"
+    my_profile: "Trang cá nhân của tôi"
+    settings: "Thiết lập tài khoản"
+    logout: "Đăng xuất"
+    login: "Đăng nhập"
+    edit_user: "Cập nhật thông tin tài khoản"
+    all_users: "Danh sách người dùng"
+    reset_password: "Cập nhật mật khẩu"
+    forgot_password: "Quên mật khẩu"
+
+  button:
+    user:
+      signup: "Đăng ký tài khoản"
+      create_account: "Tạo tài khoản"
+      delete: "Xóa người dùng"
+      change_avatar: "Cập nhật ảnh đại diện"
+      save_change: "Cập nhật thay đổi"
+      unfollow: "Bỏ theo dõi"
+      follow: "Theo dõi"
+      confirm_forgot_password_mail: "Gửi"
+      update_password: "Cập nhật mật khẩu"
+    micropost:
+      post: "Đăng bài"
+      delete: "Xóa bài"
+
+  flash:
+    success:
+      account_activated: "Tài khoản của bạn đã được kích hoạt"
+      micropost_deleted: "Xóa bài viết thành công"
+      micropost_created: "Đăng bài viết mới thành công"
+      password_reset: "Đã thiết lập mật khẩu mới"
+      user_deleted: "Xóa tài khoản người dùng thành công"
+      profile_updated: "Cập nhật thông tin người dùng thành công"
+    danger:
+      require_login: "Bạn cần đăng nhập để tiếp tục!"
+      invalid_activation_link: "Đường link kích hoạt tài khoản không hợp lệ!"
+      delete_micropost_fail: "Xóa bài viết thất bại!"
+      password_reset_expired: "Mật khẩu kích hoạt mới đã hết hạn!"
+      invalid_user_info: "Thông tin đăng nhập không hợp lệ!"
+      user_not_found: "Không tìm thấy người dùng!"
+      not_adim: "Bạn không có quyền admin!"
+      not_current_user: "Bạn không có quyền của người dùng này!"
+      cannot_delete_admin: "Không được phép xóa tài khoản admin!"
+      user_deleted: "Xóa tài khoản người dùng thất bại!"
+    info:
+      email_reset_password: "Đã gửi email kích hoạt lại mật khẩu"
+      email_not_found: "Địa chỉ email không hợp lệ"
+      mail_check: "Kiểm tra mail để kích hoạt tài khoản"
+    warning:
+      not_activated: "Tài khoản chưa được kích hoạt!"
+
+  views:
+    pagination:
+      first: "« Đầu tiên"
+      last: "Cuối cùng »"
+      previous: "‹ Trước"
+      next: "Sau ›"
+      truncate: "…"
+  js:
+    alert:
+      micropost.image_max_size: "Ảnh vượt quá kích thước 5MB cho phép"
+
   users:
     new:
       signup: "Đăng ký tài khoản"
       name: "tên đăng nhập"
       password: "mật khẩu"
-      confirm_pass: "Xác nhận mật khẩu"
-      email: "Email"
-      create_account: "Tạo tài khoản"
+      password_confirm: "Xác nhận mật khẩu"
+      email: "Địa chỉ email"
+
   sessions:
     new:
-      email: "Email"
+      email: "Địa chỉ email"
       password: "Mật khẩu"
       login: "Đăng nhập"
       new_user_ques: "Bạn chưa có tài khoản?"
       signup: "Đăng ký tài khoản"
+      remember_me: "duy trì trạng thái đăng nhập"
+      forgot_password: "Quên mật khẩu?"
+      password_confirm: "Xác nhận mật khẩu"
+
   activerecord:
     attributes:
       user:
         name: "Tên người dùng"
-        email: "Email"
+        email: "Địa chỉ email"
         password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
     errors:
       models:
         user:

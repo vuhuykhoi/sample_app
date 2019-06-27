@@ -17,18 +17,17 @@ group :development, :test do
   gem "sqlite3", "1.3.13"
 end
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "bcrypt", "3.1.12"
 gem "bootstrap-kaminari-views"
 gem "carrierwave", "1.2.2"
 gem "cloudinary"
 gem "config"
 gem "faker", "1.7.3"
+gem "i18n-js"
 gem "kaminari"
 gem "mini_magick", "4.7.0"
 gem "rails", "~> 5.2.3"
 gem "rails-i18n"
-gem "i18n-js"
 
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3"
@@ -47,17 +46,6 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.5"
-# Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
-# Use ActiveModel has_secure_password
-# gem "bcrypt", "~> 3.1.7"
-
-# Use ActiveStorage variant
-# gem "mini_magick", "~> 4.8"
-
-# Use Capistrano for deployment
-# gem "capistrano-rails", group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 

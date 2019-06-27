@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       check_user_active user
     else
-      flash.now[:danger] = t ".invalid_user_infor_message"
+      flash.now[:danger] = t "flash.danger.invalid_user_info"
       render :new
     end
   end
@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
       check_remember_box user
       redirect_back_or user
     else
-      flash[:warning] = t "not_activated_message"
+      flash[:warning] = t "flash.warning.not_activated"
       redirect_to root_url
     end
   end

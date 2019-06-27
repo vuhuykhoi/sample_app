@@ -1,17 +1,17 @@
 <footer class="footer">
   <small>
-    The <%=link_to "Ruby on Rails Tutorial","https://www.railstutorial.org/"%>
-    by <%=link_to "Michael Hartll","http://www.michaelhartl.com/"%>
+    The <%=link_to "Ruby on Rails Tutorial","https://www.railstutorial.org/" %>
+    by <%=link_to "Michael Hartll","http://www.michaelhartl.com/" %>
   </small>
   <nav>
     <ul>
-      <li><%= link_to t(".about"), about_path %></li>
-      <li><%= link_to t(".contact"),contact_path %></li>
-      <li><%=link_to t(".news"),"http://news.railstutorial.org/"%>
+      <li><%= link_to t("page.about"), about_path %></li>
+      <li><%= link_to t("page.contact"),contact_path %></li>
+      <li><%=link_to t("page.news"),"http://news.railstutorial.org/" %>
     </ul>
     <ul>
-      <li><%= link_to t(".english"), locale:"en" %></li>
-      <li><%= link_to t(".vietnamese"), locale:"vi" %></li>
+      <li><%= link_to t("page.english"), locale:"en" %></li>
+      <li><%= link_to t("page.vietnamese"), locale:"vi" %></li>
     </ul>
   </nav>
 </footer>

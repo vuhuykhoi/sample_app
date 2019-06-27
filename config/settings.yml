@@ -5,6 +5,7 @@ user:
     min_pass_length: 6
   gravatar_size: 80
   gravatar_size_small: 50
+  gravatar_size_mini: 30
 remember_box:
   is_checked: "1"
 num_users_per_page: 6

@@ -34,6 +34,7 @@ en:
   static_pages:
     home:
       home: "Home"
+      signup: "Sign Up Now"
     help:
       help: "Help"
     about:
@@ -43,3 +44,14 @@ en:
   layouts:
     application:
       web_title: "Ruby on Rails Tutorial Sample App"
+    header:
+      home: "Home"
+      help: "Help"
+      login: "Login"
+    footer:
+      about: "About"
+      contact: "Contact"
+      news: "News"
+  users:
+    new:
+      signup: "Sign up"

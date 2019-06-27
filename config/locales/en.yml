@@ -60,6 +60,11 @@ en:
       confirm_pass: "Confirm password"
       email: "Email"
       create_account: "Create my account"
+  sessions:
+    new:
+      email: "Email"
+      password: "Password"
+      login: "Log in"
   shared:
     error_messages:
       error: "error"

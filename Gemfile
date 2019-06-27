@@ -7,6 +7,7 @@ group :production do
 end
 
 gem "bootstrap-sass", "3.3.7"
+gem "jquery-rails"
 
 group :development, :test do
   gem "byebug", "9.0.6", platform: :mri

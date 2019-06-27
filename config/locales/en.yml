@@ -40,3 +40,6 @@ en:
       about: "About"
     contact:
       contact: "Contact"
+  layouts:
+    application:
+      web_title: "Ruby on Rails Tutorial Sample App"

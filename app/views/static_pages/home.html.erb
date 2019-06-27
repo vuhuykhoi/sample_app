@@ -1,0 +1,17 @@
+<% provide(:title, t(".home") ) %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Sample App</h1>
+    <p>
+      This is the home page for the
+      <%= link_to 'Ruby on Rails Tutorial', "https://www.railstutorial.org/" %>
+      sample application.
+    </p>
+    <%= link_to "English", locale:"en" %>
+    <%= link_to "Vietnamese", locale:"vi" %>
+  </body>
+</html>

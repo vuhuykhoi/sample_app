@@ -1,0 +1,10 @@
+vi:
+  static_pages:
+    home:
+      home: "Trang chủ"
+    help:
+      help: "Trợ giúp"
+    about:
+      about: "Về chúng tôi"
+    contact:
+      contact: "Liên hệ"

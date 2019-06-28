@@ -8,6 +8,7 @@ end
 
 group :development, :test do
   gem "byebug",  "9.0.6", platform: :mri
+  gem "rubocop", "~> 0.54.0", require: false
   gem "sqlite3", "1.3.13"
 end
 
@@ -45,12 +46,6 @@ gem "jbuilder", "~> 2.5"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
-
-# group :development, :test do
-# Call "byebug" anywhere in the code to stop
-# execution and get a debugger console
-#   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-# end
 
 group :development do
   # Access an interactive console on exception pages or

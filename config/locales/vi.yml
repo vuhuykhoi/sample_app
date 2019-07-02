@@ -8,3 +8,6 @@ vi:
       about: "Về chúng tôi"
     contact:
       contact: "Liên hệ"
+  layouts:
+    application:
+      web_title: "Hướng dẫn Rails qua các ví dụ"

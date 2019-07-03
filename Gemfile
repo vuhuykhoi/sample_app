@@ -6,6 +6,8 @@ group :production do
   gem "pg", "0.20.0"
 end
 
+gem "bootstrap-sass", "3.3.7"
+
 group :development, :test do
   gem "byebug",  "9.0.6", platform: :mri
   gem "rubocop", "~> 0.54.0", require: false

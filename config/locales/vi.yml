@@ -2,12 +2,25 @@ vi:
   static_pages:
     home:
       home: "Trang chủ"
+      signup: "Đăng ký tài khoản"
     help:
       help: "Trợ giúp"
     about:
       about: "Về chúng tôi"
     contact:
       contact: "Liên hệ"
+
   layouts:
     application:
       web_title: "Hướng dẫn Rails qua các ví dụ"
+    header:
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      login: "Đăng nhập"
+    footer:
+      about: "Về chúng tôi"
+      contact: "Liên hệ"
+      news: "tin tức"
+  users:
+    new:
+      signup: "Đăng ký tài khoản"

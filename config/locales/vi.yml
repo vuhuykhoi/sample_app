@@ -31,6 +31,13 @@ vi:
       confirm_pass: "Xác nhận mật khẩu"
       email: "Email"
       create_account: "Tạo tài khoản"
+  sessions:
+    new:
+      email: "Email"
+      password: "Mật khẩu"
+      login: "Đăng nhập"
+      new_user_ques: "Bạn chưa có tài khoản?"
+      signup: "Đăng ký tài khoản"
   activerecord:
     attributes:
       user:

@@ -55,3 +55,11 @@ en:
   users:
     new:
       signup: "Sign up"
+      name: "Name"
+      password: "Password"
+      confirm_pass: "Confirm password"
+      email: "Email"
+      create_account: "Create my account"
+  shared:
+    error_messages:
+      error: "error"

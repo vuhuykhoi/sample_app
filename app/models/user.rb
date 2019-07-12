@@ -65,7 +65,7 @@ class User < ApplicationRecord
   end
 
   def password_reset_expired?
-    reset_sent_at < 2.hours.ago
+    reset_sent_at < Settings.mail_reset_expried_time.hours.ago
   end
 
   private

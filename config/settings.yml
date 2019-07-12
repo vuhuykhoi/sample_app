@@ -9,3 +9,4 @@ remember_box:
   is_checked: "1"
 list_user:
   num_user_per_page: "6"
+mail_reset_expried_time: 2

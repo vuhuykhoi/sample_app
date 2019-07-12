@@ -17,7 +17,10 @@ end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "bcrypt", "3.1.12"
+gem "bootstrap-kaminari-views"
 gem "config"
+gem "faker", "1.7.3"
+gem "kaminari"
 gem "rails", "~> 5.2.3"
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3"

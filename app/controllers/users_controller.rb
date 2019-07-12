@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: %i(destroy)
 
   def index
-    @users = User.page(params[:page]).per Settings.list_user.num_user_per_page
+    @users = User.activated.page(params[:page]).per Settings.list_user.num_user_per_page
   end
 
   def new
@@ -16,23 +16,23 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t ".welcome_message"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "mail_check_message"
+      redirect_to root_url
     else
       render :new
     end
   end
 
   def show
-    render :user_not_found unless @user
+    redirect_to(root_url) && return unless @user.activated?
   end
 
   def edit; end
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t("profile_updated_message")
+      flash[:success] = t "profile_updated_message"
       redirect_to @user
     else
       render :edit
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     if @user.admin?
       flash[:danger] = t"cannot_delete_admin"
     elsif @user.destroy
-      flash[:success] = t"user_deleted_message"
+      flash[:success] = t "user_deleted_message"
     else
       flash[:danger] = t"cannot_deleted"
     end
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   def logged_in_user
     return if logged_in?
     store_location
-    flash[:danger] = t(".require_login_message")
+    flash[:danger] = t "require_login_message"
     redirect_to login_url
   end
 
@@ -79,7 +79,7 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user
-    flash[:danger] = t"user_not_found"
+    flash[:danger] = t "user_not_found"
     redirect_to root_path
   end
 end

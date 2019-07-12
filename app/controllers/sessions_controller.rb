@@ -5,11 +5,16 @@ class SessionsController < ApplicationController
     user = User.find_by email: params[:session][:email].downcase
 
     if user&.authenticate(params[:session][:password])
-      log_in user
-      check_remember_box user
-      redirect_back_or user
+      if user.activated?
+        log_in user
+        check_remember_box user
+        redirect_back_or user
+      else
+        flash[:warning] = t "not_activated_message"
+        redirect_to root_url
+      end
     else
-      flash.now[:danger] = t(".invalid_user_infor")
+      flash.now[:danger] = t ".invalid_user_infor"
       render :new
     end
   end
@@ -20,8 +25,8 @@ class SessionsController < ApplicationController
   end
 
   def redirect_back_or default
-    redirect_to(session[:forwarding_url] || default)
-    session.delete(:forwarding_url)
+    redirect_to session[:forwarding_url] || default
+    session.delete :forwarding_url
   end
 
   def store_location

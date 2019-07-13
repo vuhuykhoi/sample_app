@@ -7,6 +7,13 @@ user:
   gravatar_size_small: 50
 remember_box:
   is_checked: "1"
-list_user:
-  num_user_per_page: "6"
+num_users_per_page: 6
+num_feeds_per_page: 10
 mail_reset_expried_time: 2
+micropost:
+  picture_max_size: 5
+  content_max_length: 140
+CarrierWave:
+  resize_to_limit:
+    width: 400
+    height: 400

@@ -11,6 +11,6 @@ class Micropost < ApplicationRecord
 
   def picture_size
     return unless picture.size > Settings.micropost.picture_max_size.megabytes
-    errors.add :picture, I18n.t(".picture_size_message")
+    errors.add :picture, I18n.t("picture_size_message")
   end
 end
